@@ -1,9 +1,15 @@
-import Header from "./components/Header";
+import Header from './components/Header';
+import Courses from './components/course/Courses';
 
 function App() {
-  return <>
-    <Header></Header>
-  </>;
+
+
+  return (
+    <>
+      <Header></Header>
+      <Courses ></Courses>
+    </>
+  );
 }
 
 export default App;
