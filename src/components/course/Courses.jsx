@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import PropTypes from 'prop-types';
+import Course from './Course';
 
 const Courses = () => {
   const [courses, setCourses] = useState([]);
@@ -11,15 +11,12 @@ const Courses = () => {
   }, []);
 
   return (
-    <div className="container mx-auto max-sm:px-5">
-      <h3>Total course: {courses.length}</h3>
-      
+    <div className="w-3/4 grid grid-cols-3 gap-6 mb-20">
+      {courses.map((course) => (
+        <Course key={course.course_id} course={course}></Course>
+      ))}
     </div>
   );
-};
-
-Courses.propTypes = {
-  courses: PropTypes.array.isRequired,
 };
 
 export default Courses;

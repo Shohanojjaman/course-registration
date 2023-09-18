@@ -5,3 +5,13 @@
 @layer base {
   @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 }
+
+@layer components {
+  .btn {
+    @apply bg-theme w-full rounded-lg p-2 text-center text-white font-semibold text-xl border-2 border-theme transition-all duration-300
+  }
+
+  .btn:hover {
+    @apply bg-transparent text-theme
+  }
+}
