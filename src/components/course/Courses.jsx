@@ -22,15 +22,16 @@ const Courses = () => {
       selectedCourses.forEach((item) => {
         credit += item.credit;
       });
-      if (totalCredit > 20) {
-        return alert('Sorry');
+      if (credit > 20) {
+        return alert("Don't allow to add more then 20 Credit hour.");
       }
       setTotalPrice(totalPrice + course.price);
-      setTotalCredit(totalCredit + credit);
+      setTotalCredit(credit);
       setRemainingCredit(remainingCredit - course.credit);
       setSelectedCourses([...selectedCourses, course]);
     }
   };
+  console.log(totalCredit);
 
   return (
     <main className="container mx-auto max-sm:px-5 flex gap-6">

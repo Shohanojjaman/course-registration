@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-const Carts = ({ selectedCourses, totalPrice, setTotalCredit: totalCredit, remainingCredit }) => {
+const Carts = ({ selectedCourses, totalPrice, totalCredit, remainingCredit }) => {
   return (
     <div className="w-1/4 p-4 bg-white rounded-lg self-start space-y-4">
       <h4 className="text-theme text-xl font-bold">Credit Hour Remaining {remainingCredit} hr</h4>
@@ -20,7 +20,7 @@ const Carts = ({ selectedCourses, totalPrice, setTotalCredit: totalCredit, remai
 Carts.propTypes = {
   selectedCourses: PropTypes.array,
   totalPrice: PropTypes.number,
-  setTotalCredit: PropTypes.number,
+  totalCredit: PropTypes.number,
   remainingCredit: PropTypes.number,
 };
 
