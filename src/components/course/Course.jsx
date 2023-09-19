@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 
-const Course = ({ course }) => {
+const Course = ({ course, handleAddToCart }) => {
   const { cover, title, description, price, credit } = course;
   return (
     <div className="p-4 bg-white rounded-lg space-y-4">
@@ -31,16 +31,19 @@ const Course = ({ course }) => {
               strokeLinejoin="round"
             />
           </svg>
-          <p className="text-body">Credit: {credit}</p>
+          <p className="text-body">Credit: {credit}hr</p>
         </div>
       </div>
-      <button className="btn">Select</button>
+      <button onClick={() => handleAddToCart(course)} className="btn">
+        Select
+      </button>
     </div>
   );
 };
 
 Course.propTypes = {
   course: PropTypes.object.isRequired,
+  handleAddToCart: PropTypes.func,
 };
 
 export default Course;
